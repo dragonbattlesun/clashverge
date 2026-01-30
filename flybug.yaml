@@ -1,0 +1,25 @@
+proxies:
+  - name: Flybug-sxzhu
+    type: vless
+    server: 64.176.46.33
+    port: 12518
+    uuid: fb39b904-9510-4bde-95e6-7875c507c90a
+    network: tcp
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: nrS9p1qk8HEMtvQJpVqrejL0YttVMjJP88HikNSGNg8
+      short-id: "68"
+      spider-x: /
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - Flybug-sxzhu
+      - DIRECT
+
+rules:
+  - MATCH,PROXY
