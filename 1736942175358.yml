@@ -1138,6 +1138,21 @@ proxies:
     ws-path: /lisa
     ws-headers:
       Host: ipip.net
+  -
+    name: Flybug-SXuZhu@flybug.com
+    type: vless
+    server: 64.176.36.89
+    port: 8443
+    uuid: 8c318e01-292f-4bc4-9079-3c60e20be5fb
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    servername: www.intel.com
+    reality-opts:
+      public-key: WfpK-GsSUBWTQOH6aRdnXG76Y1QYSqYckaEHVD9FSEo
+      short-id: 18ada7421385ad1f
 proxy-groups:
   -
     name: 🔰国外流量
@@ -1221,6 +1236,7 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
+      - Flybug-SXuZhu@flybug.com
       - 🚀直接连接
   -
     name: ⚓️其他流量
@@ -1311,6 +1327,7 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
+      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬Youtube
     type: select
@@ -1394,6 +1411,7 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
+      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬Netflix
     type: select
@@ -1477,6 +1495,7 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
+      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬哔哩哔哩
     type: select
@@ -1560,6 +1579,7 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
+      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬国外媒体
     type: select
@@ -1643,6 +1663,7 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
+      - Flybug-SXuZhu@flybug.com
   -
     name: 🍎苹果服务
     type: select
