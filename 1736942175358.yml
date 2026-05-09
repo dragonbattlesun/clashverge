@@ -1144,6 +1144,7 @@ proxy-groups:
     name: 🔰国外流量
     type: select
     proxies:
+      - Flybug-SXuZhu@flybug.com
       - ♻️ 自动选择
       - '  v5【a】新加坡'
       - '  v5【a】香港icable'
@@ -1223,7 +1224,6 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
-      - Flybug-SXuZhu@flybug.com
       - 🚀直接连接
   -
     name: ⚓️其他流量
@@ -1236,6 +1236,7 @@ proxy-groups:
     name: ✈️Telegram
     type: select
     proxies:
+      - Flybug-SXuZhu@flybug.com
       - 🔰国外流量
       - '  v5【a】新加坡'
       - '  v5【a】香港icable'
@@ -1315,11 +1316,11 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
-      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬Youtube
     type: select
     proxies:
+      - Flybug-SXuZhu@flybug.com
       - 🔰国外流量
       - '  v5【a】新加坡'
       - '  v5【a】香港icable'
@@ -1399,11 +1400,11 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
-      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬Netflix
     type: select
     proxies:
+      - Flybug-SXuZhu@flybug.com
       - 🔰国外流量
       - '  v5【a】新加坡'
       - '  v5【a】香港icable'
@@ -1483,7 +1484,6 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
-      - Flybug-SXuZhu@flybug.com
   -
     name: 🎬哔哩哔哩
     type: select
@@ -1572,6 +1572,7 @@ proxy-groups:
     name: 🎬国外媒体
     type: select
     proxies:
+      - Flybug-SXuZhu@flybug.com
       - 🔰国外流量
       - '  v5【a】新加坡'
       - '  v5【a】香港icable'
@@ -1651,7 +1652,6 @@ proxy-groups:
       - 【直连】韩国首尔
       - 【直连】香港
       - 【直连】香港hkt-NF
-      - Flybug-SXuZhu@flybug.com
   -
     name: 🍎苹果服务
     type: select
