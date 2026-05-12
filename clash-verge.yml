@@ -1,9 +1,8 @@
-#!MANAGED-CONFIG https://mmxz1.meimei1314.xyz//link/0ZbPRZg02C6qh8ci?clash=1
+#!MANAGED-CONFIG https://raw.githubusercontent.com/dragonbattlesun/clashverge/main/1736942175358.yml interval=86400 strict=false
 
 #---------------------------------------------------#
-## 上次更新于：2025-01-13 02:32:31 已修复兼容M芯片
+## 优化更新 2026-05-12
 #---------------------------------------------------#
-
 mixed-port: 10809
 allow-lan: false
 mode: rule
@@ -19,15 +18,15 @@ geox-url:
   geosite: "https://cdn.jsdmirror.com/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://cdn.jsdmirror.com/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
   asn: "https://cdn.jsdmirror.com/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
+global-client-fingerprint: chrome
 find-process-mode: strict
 keep-alive-interval: 30
 external-controller: '127.0.0.1:9090'
-secret: 'replace-with-a-long-random-secret-min-32-chars'
+secret: '9s8k2p7xqf3dazjcmvbnrtyuioplkjhgfds'
 
 profile:
   store-selected: true
   store-fake-ip: true
-
 dns:
   enable: true
   ipv6: false
@@ -95,7 +94,6 @@ sniffer:
     - "+.lan"
     - "+.local"
 
-# ========== 下面你的所有节点、分组完全保留不动 ==========
 proxies:
   -
     name: '  v5【a】新加坡'
@@ -1046,90 +1044,119 @@ proxies:
       short-id: 18ada7421385ad1f
 
 proxy-groups:
-  -
-    name: ♻️ 自动选择
+  - name: 🚀自动优选
     type: url-test
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      -  v5【a】新加坡
+      -  v5【a】香港icable
+      -  v5【a】香港原生-NF
+      -  v5【jp】东京原生
+      -  v5【us】美国原生
+      - 【chatgpt】美国原生-01
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    lazy: true
+
+  - name: 🌏香港节点
+    type: select
     proxies:
-      - '  v5【a】新加坡'
-      - '  v5【a】香港icable'
-      - '  v5【a】香港原生-NF'
-      - '  v5【b】台湾hinet'
-      - '  v5【b】台湾hinet-02'
-      - '  v5【hk-sg】新加坡-01-(dns解锁)'
-      - '  v5【hk-sg】新加坡-02-(dns解锁)'
-      - '  v5【hk】香港hgc-NF'
-      - '  v5【hk】香港hkt-dns解锁'
-      - '  v5【hk】香港hkt2-dns解锁'
-      - '  v5【hk】香港原生hgc-NF'
-      - '  v5【jp】东京原生'
-      - '  v5【jp】东京原生-02'
-      - '  v5【jp】日本gmo原生'
-      - '  v5【jp】日本gmo原生-02'
-      - '  v5【sg】新加坡-01-dns解锁'
-      - '  v5【sg】新加坡-02-dns解锁'
-      - '  v5【sg】新加坡-3'
-      - '  v5【tw】台湾动态-01-dns解锁'
-      - '  v5【tw】台湾动态-02-dns解锁'
-      - '  v5【u-ca】加拿大'
-      - '  v5【us】美国原生'
-      - '  v5【us】美国原生-联通9929'
-      - '  【直连-三网】香港hkt'
-      - '  【直连-三网】香港hkt-02'
-      - ' v4【a】台湾'
-      - ' v4【a】台湾-02'
-      - ' v4【a】新加坡pccw-NF'
-      - ' v4【hk-sg】新加坡-01-(dns解锁)'
-      - ' v4【hk】香港'
-      - ' v4【hk】香港-02'
-      - ' v4【hk】香港家宽hkbn-NF'
-      - ' v4【jp】日本aws'
-      - ' v4【jp】日本m247'
-      - ' v4【kr】韩国原生'
-      - ' v4【my】马来西亚'
-      - ' v4【sg】新加坡'
-      - ' v4【sg】新加坡原生'
-      - ' v4【us】美国cera'
-      - ' v4【us】美国原生-02-NF'
-      - ' v4【us】美国原生-3-NF'
-      - ' 【直连-三网】台湾hinet'
-      - ' 【直连-三网】香港-02'
-      - v3【a】新加坡-01
-      - v3【a】新加坡-02
-      - 'v3【hk】香港 3-nf'
-      - v3【hk】香港1-nf
-      - v3【hk】香港2-nf
-      - v3【hk】香港G口-01
-      - v3【hk】香港G口-2
-      - v3【hk】香港G口-3
-      - v3【jp】日本2G-01
-      - 'v3【jp】日本2G-02 '
-      - v3【sg】新加坡2-linode
-      - v3【sg】新加坡linode
-      - "【chatgpt】美国原生-01\t"
-      - "【chatgpt】美国原生-02\t"
-      - "【chatgpt】美国原生-03\t"
-      - '【EU】土耳其 '
-      - 【EU】德国
-      - 【EU】英国伦敦原生
-      - 【EU】荷兰
-      - 【trojan】美国洛杉矶9929
-      - 【trojan】迫真阿根廷
+      - 自动优选
+      -  v5【a】香港icable
+      -  v5【a】香港原生-NF
+      -  v5【hk】香港hgc-NF
+      -  v3【hk】香港 3-nf
       - 【trojan】香港原生
+      - 【直连-三网】香港hkt
+
+  - name: 🇸🇬新加坡节点
+    type: select
+    proxies:
+      - 自动优选
+      -  v5【a】新加坡
+      -  v5【hk-sg】新加坡-01-(dns解锁)
+      - v3【a】新加坡-01
+      -  v4【sg】新加坡原生
+
+  - name: 🇯🇵日本节点
+    type: select
+    proxies:
+      - 自动优选
+      -  v5【jp】东京原生
+      -  v5【jp】日本gmo原生
+      - v4【jp】日本aws
       - 【直连-三网】日本gmo原生
-      - 【直连-三网】美国cera-02
-      - 【直连-三网】香港Microsoft
-      - 【直连-电信】香港家宽icable-NF
-      - 【直连-联通】日本vu
+
+  - name: 🇺🇸美国节点
+    type: select
+    proxies:
+      - 自动优选
+      -  v5【us】美国原生
+      - 【chatgpt】美国原生-01
+      -  v4【us】美国cera
+      - 【trojan】美国洛杉矶9929
+
+  - name: ********台湾节点
+    type: select
+    proxies:
+      - 自动优选
+      -  v5【b】台湾hinet
+      -  v4【a】台湾
       - 【直连】台湾hinet（香港可用）
-      - 【直连】新加坡-01
-      - 【直连】新加坡原生
-      - 【直连】美国原生
-      - 【直连】美国原生-2
-      - 【直连】韩国首尔
-      - 【直连】香港
-      - 【直连】香港hkt-NF
+
+  - name: 🔰国外流量
+    type: select
+    proxies:
+      - 🚀自动优选
+      - 🌏香港节点
+      - 🇸🇬新加坡节点
+      - 🇯🇵日本节点
+      - 🇺🇸美国节点
+      - ********台湾节点
       - Flybug-SXuZhu@flybug.com
+
+  - name: 🚀直接连接
+    type: select
+    proxies:
+      - DIRECT
+
+rule-providers:
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
+rules:
+  - DOMAIN-SUFFIX,feishu.cn,DIRECT
+  - DOMAIN-SUFFIX,feishu.com,DIRECT
+  - DOMAIN-SUFFIX,larksuite.com,DIRECT
+  - DOMAIN-SUFFIX,larkoffice.com,DIRECT
+  - DOMAIN-KEYWORD,bytedance,DIRECT
+  - GEOSITE,private,DIRECT
+  - GEOIP,private,DIRECT,no-resolve
+  - RULE-SET,applications,DIRECT
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,icloud-cn,DIRECT
+  - GEOSITE,apple,🔰国外流量
+  - GEOSITE,icloud,🔰国外流量
+  - GEOSITE,bilibili,🔰国外流量
+  - GEOSITE,youtube,🔰国外流量
+  - GEOSITE,netflix,🔰国外流量
+  - GEOSITE,disney,🔰国外流量
+  - GEOSITE,hbo,🔰国外流量
+  - GEOSITE,spotify,🔰国外流量
+  - GEOSITE,telegram,🔰国外流量
+  - GEOIP,telegram,🔰国外流量,no-resolve
+  - GEOSITE,google,🔰国外流量
+  - GEOSITE,microsoft,🔰国外流量
+  - GEOSITE,github,🔰国外流量
+  - GEOSITE,openai,🔰国外流量
+  - GEOSITE,gfw,🔰国外流量
+  - GEOSITE,greatfire,🔰国外流量
+  - GEOSITE,geolocation-!cn,🔰国外流量
+  - GEOSITE,cn,DIRECT
+  - GEOIP,cn,DIRECT,no-resolve
+  - MATCH,🔰国外流量
