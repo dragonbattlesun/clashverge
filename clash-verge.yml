@@ -1044,7 +1044,7 @@ proxies:
       short-id: 18ada7421385ad1f
 
 proxy-groups:
-  - name: 🚀自动优选
+  - name: 自动优选
     type: url-test
     proxies:
       - Flybug-SXuZhu@flybug.com
@@ -1096,23 +1096,14 @@ proxy-groups:
       -  v4【us】美国cera
       - 【trojan】美国洛杉矶9929
 
-  - name: "********台湾节点"
-    type: select
-    proxies:
-      - 自动优选
-      -  v5【b】台湾hinet
-      -  v4【a】台湾
-      - 【直连】台湾hinet（香港可用）
-
   - name: 🔰国外流量
     type: select
     proxies:
-      - 🚀自动优选
+      - 自动优选
       - 🌏香港节点
       - 🇸🇬新加坡节点
       - 🇯🇵日本节点
       - 🇺🇸美国节点
-      - "********台湾节点"
       - Flybug-SXuZhu@flybug.com
 
   - name: 🚀直接连接
