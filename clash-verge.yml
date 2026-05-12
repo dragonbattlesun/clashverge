@@ -1,4 +1,4 @@
-#!MANAGED-CONFIG https://raw.githubusercontent.com/dragonbattlesun/clashverge/main/clash-verge.yml interval=86400 strict=false
+#!MANAGED-CONFIG https://mmxz1.meimei1314.xyz//link/0ZbPRZg02C6qh8ci?clash=1
 
 #---------------------------------------------------#
 ## 上次更新于：2025-01-13 02:32:31
@@ -1060,6 +1060,48 @@ proxy-groups:
       - Flybug-SXuZhu@flybug.com
       - 🚀直接连接
   -
+    name: ⚓️其他流量
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
+    name: ✈️Telegram
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
+    name: 🎬Youtube
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
+    name: 🎬Netflix
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
+    name: 🎬哔哩哔哩
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
+    name: 🎬国外媒体
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
+    name: 🍎苹果服务
+    type: select
+    proxies:
+      - Flybug-SXuZhu@flybug.com
+      - 🚀直接连接
+  -
     name: 🚀直接连接
     type: select
     proxies:
@@ -1095,18 +1137,18 @@ rules:
   # ===== Apple / iCloud 国内外分流 =====
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,icloud-cn,DIRECT
-  - GEOSITE,apple,🔰国外流量
-  - GEOSITE,icloud,🔰国外流量
+  - GEOSITE,apple,🍎苹果服务
+  - GEOSITE,icloud,🍎苹果服务
 
   # ===== 流媒体 / 社交 分组路由 =====
-  - GEOSITE,bilibili,🔰国外流量
-  - GEOSITE,youtube,🔰国外流量
-  - GEOSITE,netflix,🔰国外流量
-  - GEOSITE,disney,🔰国外流量
-  - GEOSITE,hbo,🔰国外流量
-  - GEOSITE,spotify,🔰国外流量
-  - GEOSITE,telegram,🔰国外流量
-  - GEOIP,telegram,🔰国外流量,no-resolve
+  - GEOSITE,bilibili,🎬哔哩哔哩
+  - GEOSITE,youtube,🎬Youtube
+  - GEOSITE,netflix,🎬Netflix
+  - GEOSITE,disney,🎬Netflix
+  - GEOSITE,hbo,🎬国外媒体
+  - GEOSITE,spotify,🎬国外媒体
+  - GEOSITE,telegram,✈️Telegram
+  - GEOIP,telegram,✈️Telegram,no-resolve
 
   # ===== 国外常用服务 =====
   - GEOSITE,google,🔰国外流量
@@ -1124,4 +1166,4 @@ rules:
   - GEOIP,cn,DIRECT,no-resolve
 
   # ===== 最终兜底 =====
-  - MATCH,🔰国外流量
+  - MATCH,⚓️其他流量
