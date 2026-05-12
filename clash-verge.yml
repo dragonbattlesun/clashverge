@@ -1096,7 +1096,7 @@ proxy-groups:
       -  v4【us】美国cera
       - 【trojan】美国洛杉矶9929
 
-  - name: ********台湾节点
+  - name: "********台湾节点"
     type: select
     proxies:
       - 自动优选
@@ -1112,7 +1112,7 @@ proxy-groups:
       - 🇸🇬新加坡节点
       - 🇯🇵日本节点
       - 🇺🇸美国节点
-      - ********台湾节点
+      - "********台湾节点"
       - Flybug-SXuZhu@flybug.com
 
   - name: 🚀直接连接
