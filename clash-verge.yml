@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG https://raw.githubusercontent.com/dragonbattlesun/clashverge/main/clash-verge.yml interval=86400 strict=false
 
 #---------------------------------------------------#
-## 优化更新 2026-05-12
+## 优化更新 2026-05-12 修复版
 #---------------------------------------------------#
 mixed-port: 10809
 allow-lan: false
@@ -27,6 +27,7 @@ secret: '9s8k2p7xqf3dazjcmvbnrtyuioplkjhgfds'
 profile:
   store-selected: true
   store-fake-ip: true
+
 dns:
   enable: true
   ipv6: false
@@ -95,8 +96,7 @@ sniffer:
     - "+.local"
 
 proxies:
-  -
-    name: '  v5【a】新加坡'
+  - name: v5【a】新加坡
     type: vmess
     server: gzcmt1.belinblin233.top
     port: 22357
@@ -104,8 +104,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '  v5【a】香港icable'
+  - name: v5【a】香港icable
     type: vmess
     server: hzcm.belinblin233.top
     port: 11425
@@ -117,8 +116,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【a】香港原生-NF'
+  - name: v5【a】香港原生-NF
     type: vmess
     server: azz5.belinblin233.top
     port: 21011
@@ -130,8 +128,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【b】台湾hinet'
+  - name: v5【b】台湾hinet
     type: vmess
     server: gzcm3.belinblin233.top
     port: 16032
@@ -143,8 +140,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【b】台湾hinet-02'
+  - name: v5【b】台湾hinet-02
     type: vmess
     server: hncu1.belinblin233.top
     port: 16032
@@ -156,8 +152,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【hk-sg】新加坡-01-(dns解锁)'
+  - name: v5【hk-sg】新加坡-01-dns解锁
     type: vmess
     server: azz6.belinblin233.top
     port: 18080
@@ -169,8 +164,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: '  v5【hk-sg】新加坡-02-(dns解锁)'
+  - name: v5【hk-sg】新加坡-02-dns解锁
     type: vmess
     server: az4.belinblin233.top
     port: 22355
@@ -182,8 +176,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: '  v5【hk】香港hgc-NF'
+  - name: v5【hk】香港hgc-NF
     type: vmess
     server: gzcmt.belinblin233.top
     port: 11420
@@ -195,8 +188,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【hk】香港hkt-dns解锁'
+  - name: v5【hk】香港hkt-dns解锁
     type: vmess
     server: shcn4.belinblin233.top
     port: 11421
@@ -208,8 +200,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【hk】香港hkt2-dns解锁'
+  - name: v5【hk】香港hkt2-dns解锁
     type: vmess
     server: cscu2.belinblin233.top
     port: 58860
@@ -221,8 +212,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【hk】香港原生hgc-NF'
+  - name: v5【hk】香港原生hgc-NF
     type: vmess
     server: gzcmt.belinblin233.top
     port: 21011
@@ -234,8 +224,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【jp】东京原生'
+  - name: v5【jp】东京原生
     type: vmess
     server: shcn3.belinblin233.top
     port: 26769
@@ -247,8 +236,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【jp】东京原生-02'
+  - name: v5【jp】东京原生-02
     type: vmess
     server: gzcm.belinblin233.top
     port: 35307
@@ -256,8 +244,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '  v5【jp】日本gmo原生'
+  - name: v5【jp】日本gmo原生
     type: vmess
     server: zzcu1.belinblin233.top
     port: 11026
@@ -269,8 +256,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【jp】日本gmo原生-02'
+  - name: v5【jp】日本gmo原生-02
     type: vmess
     server: zzcu2.belinblin233.top
     port: 13710
@@ -282,8 +268,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【sg】新加坡-01-dns解锁'
+  - name: v5【sg】新加坡-01-dns解锁
     type: vmess
     server: cscu4.belinblin233.top
     port: 35115
@@ -291,8 +276,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '  v5【sg】新加坡-02-dns解锁'
+  - name: v5【sg】新加坡-02-dns解锁
     type: vmess
     server: hncu2.belinblin233.top
     port: 10875
@@ -304,8 +288,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: '  v5【sg】新加坡-3'
+  - name: v5【sg】新加坡-3
     type: vmess
     server: gzcmt1.belinblin233.top
     port: 22356
@@ -317,8 +300,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: '  v5【tw】台湾动态-01-dns解锁'
+  - name: v5【tw】台湾动态-01-dns解锁
     type: vmess
     server: fscm2.belinblin233.top
     port: 22422
@@ -326,8 +308,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '  v5【tw】台湾动态-02-dns解锁'
+  - name: v5【tw】台湾动态-02-dns解锁
     type: vmess
     server: shcm.belinblin233.top
     port: 22422
@@ -335,8 +316,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '  v5【u-ca】加拿大'
+  - name: v5【u-ca】加拿大
     type: vmess
     server: yccm.belinblin233.top
     port: 32357
@@ -344,8 +324,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '  v5【us】美国原生'
+  - name: v5【us】美国原生
     type: vmess
     server: shcn1.belinblin233.top
     port: 24162
@@ -357,8 +336,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  v5【us】美国原生-联通9929'
+  - name: v5【us】美国原生-联通9929
     type: vmess
     server: la9929.belinblin233.top
     port: 38080
@@ -370,8 +348,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  【直连-三网】香港hkt'
+  - name: 直连-三网-香港hkt
     type: vmess
     server: hkt.belinblin233.top
     port: 21011
@@ -383,8 +360,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: '  【直连-三网】香港hkt-02'
+  - name: 直连-三网-香港hkt-02
     type: vmess
     server: hkbn.belinblin233.top
     port: 21011
@@ -396,8 +372,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【a】台湾'
+  - name: v4【a】台湾
     type: vmess
     server: gzcm4.belinblin233.top
     port: 26032
@@ -409,8 +384,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【a】台湾-02'
+  - name: v4【a】台湾-02
     type: vmess
     server: zscm.belinblin233.top
     port: 39007
@@ -422,8 +396,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【a】新加坡pccw-NF'
+  - name: v4【a】新加坡pccw-NF
     type: vmess
     server: gzcma.belinblin233.top
     port: 28781
@@ -431,8 +404,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: ' v4【hk-sg】新加坡-01-(dns解锁)'
+  - name: v4【hk-sg】新加坡-01-dns解锁
     type: vmess
     server: hncu.belinblin233.top
     port: 28666
@@ -444,8 +416,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: www.taobao.com }
-  -
-    name: ' v4【hk】香港'
+  - name: v4【hk】香港
     type: vmess
     server: cscu.belinblin233.top
     port: 22591
@@ -457,8 +428,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【hk】香港-02'
+  - name: v4【hk】香港-02
     type: vmess
     server: hncu4.belinblin233.top
     port: 28666
@@ -470,8 +440,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【hk】香港家宽hkbn-NF'
+  - name: v4【hk】香港家宽hkbn-NF
     type: vmess
     server: hzcm2.belinblin233.top
     port: 51363
@@ -483,8 +452,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【jp】日本aws'
+  - name: v4【jp】日本aws
     type: vmess
     server: gzcmt2.belinblin233.top
     port: 10201
@@ -496,8 +464,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: www.cctv.com }
-  -
-    name: ' v4【jp】日本m247'
+  - name: v4【jp】日本m247
     type: vmess
     server: cscu3.belinblin233.top
     port: 12230
@@ -509,8 +476,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: www.sina.com.cn }
-  -
-    name: ' v4【kr】韩国原生'
+  - name: v4【kr】韩国原生
     type: vmess
     server: gzcmt3.belinblin233.top
     port: 13712
@@ -522,8 +488,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【my】马来西亚'
+  - name: v4【my】马来西亚
     type: vmess
     server: my.belinblin233.top
     port: 59287
@@ -531,8 +496,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: ' v4【sg】新加坡'
+  - name: v4【sg】新加坡
     type: vmess
     server: zzcu.belinblin233.top
     port: 13702
@@ -544,8 +508,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【sg】新加坡原生'
+  - name: v4【sg】新加坡原生
     type: vmess
     server: sgi.belinblin233.top
     port: 45115
@@ -557,8 +520,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【us】美国cera'
+  - name: v4【us】美国cera
     type: vmess
     server: lacera.belinblin233.top
     port: 58010
@@ -570,8 +532,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【us】美国原生-02-NF'
+  - name: v4【us】美国原生-02-NF
     type: vmess
     server: lacera.belinblin233.top
     port: 58090
@@ -583,8 +544,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' v4【us】美国原生-3-NF'
+  - name: v4【us】美国原生-3-NF
     type: vmess
     server: lacera.belinblin233.top
     port: 59241
@@ -596,8 +556,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' 【直连-三网】台湾hinet'
+  - name: 直连-三网-台湾hinet
     type: vmess
     server: twhn2.belinblin233.top
     port: 21011
@@ -609,8 +568,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: ' 【直连-三网】香港-02'
+  - name: 直连-三网-香港-02
     type: vmess
     server: az.belinblin233.top
     port: 18080
@@ -622,8 +580,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【a】新加坡-01
+  - name: v3【a】新加坡-01
     type: vmess
     server: hncu2.belinblin233.top
     port: 10875
@@ -635,8 +592,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: v3【a】新加坡-02
+  - name: v3【a】新加坡-02
     type: vmess
     server: zscm1.belinblin233.top
     port: 11071
@@ -648,8 +604,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: 'v3【hk】香港 3-nf'
+  - name: v3【hk】香港3-nf
     type: vmess
     server: cscu.belinblin233.top
     port: 28666
@@ -661,8 +616,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【hk】香港1-nf
+  - name: v3【hk】香港1-nf
     type: vmess
     server: hki2.belinblin233.top
     port: 48860
@@ -674,8 +628,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【hk】香港2-nf
+  - name: v3【hk】香港2-nf
     type: vmess
     server: hki3.belinblin233.top
     port: 48861
@@ -687,8 +640,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【hk】香港G口-01
+  - name: v3【hk】香港G口-01
     type: vmess
     server: az5.belinblin233.top
     port: 10874
@@ -700,8 +652,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【hk】香港G口-2
+  - name: v3【hk】香港G口-2
     type: vmess
     server: zscm.belinblin233.top
     port: 11072
@@ -713,8 +664,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【hk】香港G口-3
+  - name: v3【hk】香港G口-3
     type: vmess
     server: hzcm2.belinblin233.top
     port: 41363
@@ -722,8 +672,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: v3【jp】日本2G-01
+  - name: v3【jp】日本2G-01
     type: vmess
     server: hncu3.belinblin233.top
     port: 10201
@@ -735,8 +684,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 'v3【jp】日本2G-02 '
+  - name: v3【jp】日本2G-02
     type: vmess
     server: hncu5.belinblin233.top
     port: 28340
@@ -748,8 +696,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: v3【sg】新加坡2-linode
+  - name: v3【sg】新加坡2-linode
     type: vmess
     server: zscm2.belinblin233.top
     port: 11070
@@ -761,8 +708,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: v3【sg】新加坡linode
+  - name: v3【sg】新加坡linode
     type: vmess
     server: azz3.belinblin233.top
     port: 20875
@@ -774,8 +720,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: www.cctv.com }
-  -
-    name: "【chatgpt】美国原生-01\t"
+  - name: chatgpt-美国原生-01
     type: vmess
     server: hbcu1.belinblin233.top
     port: 35600
@@ -783,8 +728,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: "【chatgpt】美国原生-02\t"
+  - name: chatgpt-美国原生-02
     type: vmess
     server: hbcu2.belinblin233.top
     port: 20389
@@ -792,8 +736,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: "【chatgpt】美国原生-03\t"
+  - name: chatgpt-美国原生-03
     type: vmess
     server: hbcu3.belinblin233.top
     port: 30389
@@ -801,8 +744,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: '【EU】土耳其 '
+  - name: EU-土耳其
     type: vmess
     server: azz4.belinblin233.top
     port: 45943
@@ -810,8 +752,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: 【EU】德国
+  - name: EU-德国
     type: vmess
     server: azz1.belinblin233.top
     port: 36236
@@ -819,8 +760,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: 【EU】英国伦敦原生
+  - name: EU-英国伦敦原生
     type: vmess
     server: azz4.belinblin233.top
     port: 12721
@@ -828,8 +768,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: 【EU】荷兰
+  - name: EU-荷兰
     type: vmess
     server: azz1.belinblin233.top
     port: 42323
@@ -837,29 +776,25 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  -
-    name: 【trojan】美国洛杉矶9929
+  - name: trojan-美国洛杉矶9929
     type: trojan
     server: 23.177.40.92
     port: 11016
     password: 2aeda545-ebd3-3673-8e60-aec032382350
     sni: 25102.ptest666.xyz
-  -
-    name: 【trojan】迫真阿根廷
+  - name: trojan-迫真阿根廷
     type: trojan
     server: 103.175.99.6
     port: 21011
     password: 2aeda545-ebd3-3673-8e60-aec032382350
     sni: 25102.ptest666.xyz
-  -
-    name: 【trojan】香港原生
+  - name: trojan-香港原生
     type: trojan
     server: cscu1.meimeiyun.top
     port: 23710
     password: 2aeda545-ebd3-3673-8e60-aec032382350
     sni: 25102.ptest666.xyz
-  -
-    name: 【直连-三网】日本gmo原生
+  - name: 直连-三网-日本gmo原生
     type: vmess
     server: jpa.belinblin233.top
     port: 28080
@@ -871,8 +806,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连-三网】美国cera-02
+  - name: 直连-三网-美国cera-02
     type: vmess
     server: lacera.belinblin233.top
     port: 33626
@@ -884,8 +818,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连-三网】香港Microsoft
+  - name: 直连-三网-香港Microsoft
     type: vmess
     server: azz.belinblin233.top
     port: 18080
@@ -897,8 +830,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连-电信】香港家宽icable-NF
+  - name: 直连-电信-香港家宽icable-NF
     type: vmess
     server: hki.belinblin233.top
     port: 21011
@@ -910,8 +842,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连-联通】日本vu
+  - name: 直连-联通-日本vu
     type: vmess
     server: jp3.belinblin233.top
     port: 28080
@@ -923,8 +854,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】台湾hinet（香港可用）
+  - name: 直连-台湾hinet-香港可用
     type: vmess
     server: twhn.kozow.com
     port: 21011
@@ -936,8 +866,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】新加坡-01
+  - name: 直连-新加坡-01
     type: vmess
     server: sgd.belinblin233.top
     port: 58835
@@ -949,8 +878,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】新加坡原生
+  - name: 直连-新加坡原生
     type: vmess
     server: az1.belinblin233.top
     port: 45115
@@ -962,8 +890,7 @@ proxies:
     ws-opts:
       path: /v2ray
       headers: { Host: ipip.net }
-  -
-    name: 【直连】美国原生
+  - name: 直连-美国原生
     type: vmess
     server: la3.belinblin233.top
     port: 33626
@@ -975,8 +902,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】美国原生-2
+  - name: 直连-美国原生-2
     type: vmess
     server: 89.116.144.66
     port: 28080
@@ -988,8 +914,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】韩国首尔
+  - name: 直连-韩国首尔
     type: vmess
     server: krn.belinblin233.top
     port: 28080
@@ -1001,8 +926,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】香港
+  - name: 直连-香港
     type: vmess
     server: hki1.belinblin233.top
     port: 58862
@@ -1014,8 +938,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: 【直连】香港hkt-NF
+  - name: 直连-香港hkt-NF
     type: vmess
     server: az2.belinblin233.top
     port: 51363
@@ -1027,8 +950,7 @@ proxies:
     ws-opts:
       path: /lisa
       headers: { Host: ipip.net }
-  -
-    name: Flybug-SXuZhu@flybug.com
+  - name: Flybug-SXuZhu@flybug.com
     type: vless
     server: 64.176.36.89
     port: 8443
@@ -1048,12 +970,12 @@ proxy-groups:
     type: url-test
     proxies:
       - Flybug-SXuZhu@flybug.com
-      -  v5【a】新加坡
-      -  v5【a】香港icable
-      -  v5【a】香港原生-NF
-      -  v5【jp】东京原生
-      -  v5【us】美国原生
-      - 【chatgpt】美国原生-01
+      - v5【a】新加坡
+      - v5【a】香港icable
+      - v5【a】香港原生-NF
+      - v5【jp】东京原生
+      - v5【us】美国原生
+      - chatgpt-美国原生-01
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -1062,39 +984,39 @@ proxy-groups:
     type: select
     proxies:
       - 自动优选
-      -  v5【a】香港icable
-      -  v5【a】香港原生-NF
-      -  v5【hk】香港hgc-NF
-      -  v3【hk】香港 3-nf
-      - 【trojan】香港原生
-      - 【直连-三网】香港hkt
+      - v5【a】香港icable
+      - v5【a】香港原生-NF
+      - v5【hk】香港hgc-NF
+      - v3【hk】香港3-nf
+      - trojan-香港原生
+      - 直连-三网-香港hkt
 
   - name: 🇸🇬新加坡节点
     type: select
     proxies:
       - 自动优选
-      -  v5【a】新加坡
-      -  v5【hk-sg】新加坡-01-(dns解锁)
+      - v5【a】新加坡
+      - v5【hk-sg】新加坡-01-dns解锁
       - v3【a】新加坡-01
-      -  v4【sg】新加坡原生
+      - v4【sg】新加坡原生
 
   - name: 🇯🇵日本节点
     type: select
     proxies:
       - 自动优选
-      -  v5【jp】东京原生
-      -  v5【jp】日本gmo原生
+      - v5【jp】东京原生
+      - v5【jp】日本gmo原生
       - v4【jp】日本aws
-      - 【直连-三网】日本gmo原生
+      - 直连-三网-日本gmo原生
 
   - name: 🇺🇸美国节点
     type: select
     proxies:
       - 自动优选
-      -  v5【us】美国原生
-      - 【chatgpt】美国原生-01
-      -  v4【us】美国cera
-      - 【trojan】美国洛杉矶9929
+      - v5【us】美国原生
+      - chatgpt-美国原生-01
+      - v4【us】美国cera
+      - trojan-美国洛杉矶9929
 
   - name: 🔰国外流量
     type: select
@@ -1118,17 +1040,28 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
+  private:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  reject:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
 
 rules:
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,applications,DIRECT
   - DOMAIN-SUFFIX,feishu.cn,DIRECT
   - DOMAIN-SUFFIX,feishu.com,DIRECT
   - DOMAIN-SUFFIX,larksuite.com,DIRECT
   - DOMAIN-SUFFIX,larkoffice.com,DIRECT
   - DOMAIN-KEYWORD,bytedance,DIRECT
-  - GEOSITE,private,DIRECT
-  - GEOIP,private,DIRECT,no-resolve
-  - RULE-SET,applications,DIRECT
-  - GEOSITE,category-ads-all,REJECT
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,icloud-cn,DIRECT
   - GEOSITE,apple,🔰国外流量
@@ -1140,7 +1073,6 @@ rules:
   - GEOSITE,hbo,🔰国外流量
   - GEOSITE,spotify,🔰国外流量
   - GEOSITE,telegram,🔰国外流量
-  - GEOIP,telegram,🔰国外流量,no-resolve
   - GEOSITE,google,🔰国外流量
   - GEOSITE,microsoft,🔰国外流量
   - GEOSITE,github,🔰国外流量
@@ -1149,5 +1081,4 @@ rules:
   - GEOSITE,greatfire,🔰国外流量
   - GEOSITE,geolocation-!cn,🔰国外流量
   - GEOSITE,cn,DIRECT
-  - GEOIP,cn,DIRECT,no-resolve
   - MATCH,🔰国外流量
