@@ -96,25 +96,25 @@ sniffer:
   - "+.lan"
   - "+.local"
 proxies:
-- name: Flybug-sxzhu
+- name: Flybug-SXuZhu@flybug.com
   type: vless
-  server: 64.176.46.33
-  port: 12518
-  uuid: fb39b904-9510-4bde-95e6-7875c507c90a
+  server: 64.176.36.89
+  port: 8443
+  uuid: 8c318e01-292f-4bc4-9079-3c60e20be5fb
   network: tcp
   tls: true
   flow: xtls-rprx-vision
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
+  servername: www.sony.com
+  client-fingerprint: safari
   reality-opts:
-    public-key: nrS9p1qk8HEMtvQJpVqrejL0YttVMjJP88HikNSGNg8
-    short-id: '68'
-    spider-x: "/"
+    public-key: WfpK-GsSUBWTQOH6aRdnXG76Y1QYSqYckaEHVD9FSEo
+    short-id: 18ada7421385ad1f
+    spider-x: /HL5IvCgxvoBkQCt
 proxy-groups:
 - name: VPN
   type: select
   proxies:
-  - Flybug-sxzhu
+  - Flybug-SXuZhu@flybug.com
 rules:
 - DOMAIN-SUFFIX,baidu.com,DIRECT
 - DOMAIN-SUFFIX,baidubcr.com,DIRECT
