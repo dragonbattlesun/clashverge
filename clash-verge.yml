@@ -640,3 +640,11 @@ proxies:
     server: zscm1.belinblin233.top
     port: 11071
     uuid: 2aeda545-ebd3-3673-8e60-aec032382350
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /v2ray
+      headers: { Host: ipip.net }
+    client-fingerprint: chrome
