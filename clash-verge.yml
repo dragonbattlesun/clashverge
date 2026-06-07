@@ -1,8 +1,7 @@
 #!MANAGED-CONFIG https://raw.githubusercontent.com/dragonbattlesun/clashverge/main/clash-verge.yml interval=86400 strict=false
 
-#---------------------------------------------------#
-## 修复更新 2026-05-12（解决日志报错）
-#---------------------------------------------------#
+# Source: Shadowrocket default.conf from http://192.168.2.203:8080/ downloaded 2026-06-07 15:36:52
+# Converted for Clash Verge: PROXY -> VPN, FINAL -> MATCH, skipped unsupported USER-AGENT rules.
 mixed-port: 10809
 allow-lan: false
 mode: rule
@@ -14,637 +13,702 @@ geo-auto-update: true
 geo-update-interval: 24
 geodata-loader: memconservative
 geox-url:
-  geoip: "https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
-  asn: "https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
+  geoip: https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  geosite: https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
+  asn: https://gcore.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
 find-process-mode: strict
 keep-alive-interval: 30
-external-controller: '127.0.0.1:9090'
-secret: '9s8k2p7xqf3dazjcmvbnrtyuioplkjhgfds'
-
+external-controller: 127.0.0.1:9090
+secret: 9s8k2p7xqf3dazjcmvbnrtyuioplkjhgfds
 profile:
   store-selected: true
   store-fake-ip: true
-
 dns:
   enable: true
   ipv6: false
-  listen: '127.0.0.1:1053'
+  listen: 127.0.0.1:1053
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - '*.lan'
-    - '*.local'
-    - '+.lan'
-    - '+.local'
-    - '+.msftconnecttest.com'
-    - '+.msftncsi.com'
-    - 'dns.msftncsi.com'
-    - 'www.msftncsi.com'
-    - 'www.msftconnecttest.com'
-    - 'localhost.ptlogin2.qq.com'
-    - '+.push.apple.com'
-    - '+.apple.com'
-    - '+.icloud.com'
-    - 'time.apple.com'
-    - 'time-ios.apple.com'
-    - '+.ntp.org'
-    - 'time.windows.com'
-    - 'time.nist.gov'
-    - '+.stun.*.*'
-    - '+.stun.*.*.*'
-    - '+.stun.*.*.*.*'
+  - "*.lan"
+  - "*.local"
+  - "+.lan"
+  - "+.local"
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - dns.msftncsi.com
+  - www.msftncsi.com
+  - www.msftconnecttest.com
+  - localhost.ptlogin2.qq.com
+  - "+.push.apple.com"
+  - "+.apple.com"
+  - "+.icloud.com"
+  - time.apple.com
+  - time-ios.apple.com
+  - "+.ntp.org"
+  - time.windows.com
+  - time.nist.gov
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
   default-nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
+  - 119.29.29.29
+  - 223.5.5.5
   nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
   fallback:
-    - https://1.1.1.1/dns-query
-    - https://dns.google/dns-query
-    - tls://8.8.4.4:853
+  - https://1.1.1.1/dns-query
+  - https://dns.google/dns-query
+  - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-
+    - 240.0.0.0/4
+    - 0.0.0.0/32
 sniffer:
   enable: true
   parse-pure-ip: true
   override-destination: true
   sniff:
     HTTP:
-      ports: [80, 8080-8880]
+      ports:
+      - 80
+      - 8080-8880
       override-destination: true
     TLS:
-      ports: [443, 8443]
+      ports:
+      - 443
+      - 8443
     QUIC:
-      ports: [443, 8443]
+      ports:
+      - 443
+      - 8443
   skip-domain:
-    - "+.mi.com"
-    - "+.io.mi.com"
-    - "dlg.io.mi.com"
-    - "+.push.apple.com"
-    - "+.apple.com"
-    - "+.icloud.com"
-    - "+.lan"
-    - "+.local"
-
+  - "+.mi.com"
+  - "+.io.mi.com"
+  - dlg.io.mi.com
+  - "+.push.apple.com"
+  - "+.apple.com"
+  - "+.icloud.com"
+  - "+.lan"
+  - "+.local"
 proxies:
-  - name: v5【a】新加坡
-    type: vmess
-    server: gzcmt1.belinblin233.top
-    port: 22357
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v5【a】香港icable
-    type: vmess
-    server: hzcm.belinblin233.top
-    port: 11425
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【a】香港原生-NF
-    type: vmess
-    server: azz5.belinblin233.top
-    port: 21011
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【b】台湾hinet
-    type: vmess
-    server: gzcm3.belinblin233.top
-    port: 16032
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【b】台湾hinet-02
-    type: vmess
-    server: hncu1.belinblin233.top
-    port: 16032
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【hk-sg】新加坡-01-dns解锁
-    type: vmess
-    server: azz6.belinblin233.top
-    port: 18080
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【hk-sg】新加坡-02-dns解锁
-    type: vmess
-    server: az4.belinblin233.top
-    port: 22355
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【hk】香港hgc-NF
-    type: vmess
-    server: gzcmt.belinblin233.top
-    port: 11420
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【hk】香港hkt-dns解锁
-    type: vmess
-    server: shcn4.belinblin233.top
-    port: 11421
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【hk】香港hkt2-dns解锁
-    type: vmess
-    server: cscu2.belinblin233.top
-    port: 58860
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【hk】香港原生hgc-NF
-    type: vmess
-    server: gzcmt.belinblin233.top
-    port: 21011
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【jp】东京原生
-    type: vmess
-    server: shcn3.belinblin233.top
-    port: 26769
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【jp】东京原生-02
-    type: vmess
-    server: gzcm.belinblin233.top
-    port: 35307
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v5【jp】日本gmo原生
-    type: vmess
-    server: zzcu1.belinblin233.top
-    port: 11026
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【jp】日本gmo原生-02
-    type: vmess
-    server: zzcu2.belinblin233.top
-    port: 13710
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【sg】新加坡-01-dns解锁
-    type: vmess
-    server: cscu4.belinblin233.top
-    port: 35115
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v5【sg】新加坡-02-dns解锁
-    type: vmess
-    server: hncu2.belinblin233.top
-    port: 10875
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【sg】新加坡-3
-    type: vmess
-    server: gzcmt1.belinblin233.top
-    port: 22356
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【tw】台湾动态-01-dns解锁
-    type: vmess
-    server: fscm2.belinblin233.top
-    port: 22422
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v5【tw】台湾动态-02-dns解锁
-    type: vmess
-    server: shcm.belinblin233.top
-    port: 22422
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v5【u-ca】加拿大
-    type: vmess
-    server: yccm.belinblin233.top
-    port: 32357
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v5【us】美国原生
-    type: vmess
-    server: shcn1.belinblin233.top
-    port: 24162
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v5【us】美国原生-联通9929
-    type: vmess
-    server: la9929.belinblin233.top
-    port: 38080
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: 直连-三网-香港hkt
-    type: vmess
-    server: hkt.belinblin233.top
-    port: 21011
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: 直连-三网-香港hkt-02
-    type: vmess
-    server: hkbn.belinblin233.top
-    port: 21011
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【a】台湾
-    type: vmess
-    server: gzcm4.belinblin233.top
-    port: 26032
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【a】台湾-02
-    type: vmess
-    server: zscm.belinblin233.top
-    port: 39007
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【a】新加坡pccw-NF
-    type: vmess
-    server: gzcma.belinblin233.top
-    port: 28781
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v4【hk-sg】新加坡-01-dns解锁
-    type: vmess
-    server: hncu.belinblin233.top
-    port: 28666
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: www.taobao.com }
-    client-fingerprint: chrome
-  - name: v4【hk】香港
-    type: vmess
-    server: cscu.belinblin233.top
-    port: 22591
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【hk】香港-02
-    type: vmess
-    server: hncu4.belinblin233.top
-    port: 28666
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【hk】香港家宽hkbn-NF
-    type: vmess
-    server: hzcm2.belinblin233.top
-    port: 51363
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【jp】日本aws
-    type: vmess
-    server: gzcmt2.belinblin233.top
-    port: 10201
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: www.cctv.com }
-    client-fingerprint: chrome
-  - name: v4【jp】日本m247
-    type: vmess
-    server: cscu3.belinblin233.top
-    port: 12230
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: www.sina.com.cn }
-    client-fingerprint: chrome
-  - name: v4【kr】韩国原生
-    type: vmess
-    server: gzcmt3.belinblin233.top
-    port: 13712
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【my】马来西亚
-    type: vmess
-    server: my.belinblin233.top
-    port: 59287
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    client-fingerprint: chrome
-  - name: v4【sg】新加坡
-    type: vmess
-    server: zzcu.belinblin233.top
-    port: 13702
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【sg】新加坡原生
-    type: vmess
-    server: sgi.belinblin233.top
-    port: 45115
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【us】美国cera
-    type: vmess
-    server: lacera.belinblin233.top
-    port: 58010
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【us】美国原生-02-NF
-    type: vmess
-    server: lacera.belinblin233.top
-    port: 58090
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v4【us】美国原生-3-NF
-    type: vmess
-    server: lacera.belinblin233.top
-    port: 59241
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: 直连-三网-台湾hinet
-    type: vmess
-    server: twhn2.belinblin233.top
-    port: 21011
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: 直连-三网-香港-02
-    type: vmess
-    server: az.belinblin233.top
-    port: 18080
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /lisa
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v3【a】新加坡-01
-    type: vmess
-    server: hncu2.belinblin233.top
-    port: 10875
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
-  - name: v3【a】新加坡-02
-    type: vmess
-    server: zscm1.belinblin233.top
-    port: 11071
-    uuid: 2aeda545-ebd3-3673-8e60-aec032382350
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /v2ray
-      headers: { Host: ipip.net }
-    client-fingerprint: chrome
+- name: Flybug-sxzhu
+  type: vless
+  server: 64.176.46.33
+  port: 12518
+  uuid: fb39b904-9510-4bde-95e6-7875c507c90a
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: nrS9p1qk8HEMtvQJpVqrejL0YttVMjJP88HikNSGNg8
+    short-id: '68'
+    spider-x: "/"
+proxy-groups:
+- name: VPN
+  type: select
+  proxies:
+  - Flybug-sxzhu
+rules:
+- DOMAIN-SUFFIX,baidu.com,DIRECT
+- DOMAIN-SUFFIX,baidubcr.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,yunjiasu-cdn.net,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,alicdn.com,DIRECT
+- DOMAIN,blzddist1-a.akamaihd.net,DIRECT
+- DOMAIN,cdn.angruo.com,DIRECT
+- DOMAIN,download.jetbrains.com,DIRECT
+- DOMAIN,file-igamecj.akamaized.net,DIRECT
+- DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
+- DOMAIN,officecdn-microsoft-com.akamaized.net,DIRECT
+- DOMAIN,speedtest.macpaw.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,163yun.com,DIRECT
+- DOMAIN-SUFFIX,21cn.com,DIRECT
+- DOMAIN-SUFFIX,343480.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,360in.com,DIRECT
+- DOMAIN-SUFFIX,51ym.me,DIRECT
+- DOMAIN-SUFFIX,71.am.com,DIRECT
+- DOMAIN-SUFFIX,8686c.com,DIRECT
+- DOMAIN-SUFFIX,abchina.com,DIRECT
+- DOMAIN-SUFFIX,accuweather.com,DIRECT
+- DOMAIN-SUFFIX,acgvideo.com,DIRECT
+- DOMAIN-SUFFIX,acm.org,DIRECT
+- DOMAIN-SUFFIX,acs.org,DIRECT
+- DOMAIN-SUFFIX,aicoinstorge.com,DIRECT
+- DOMAIN-SUFFIX,aip.org,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,air-matters.io,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,alibaba.com,DIRECT
+- DOMAIN-SUFFIX,alikunlun.com,DIRECT
+- DOMAIN-SUFFIX,alipay.com,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,amd.com,DIRECT
+- DOMAIN-SUFFIX,ams.org,DIRECT
+- DOMAIN-SUFFIX,animebytes.tv,DIRECT
+- DOMAIN-SUFFIX,annualreviews.org,DIRECT
+- DOMAIN-SUFFIX,aps.org,DIRECT
+- DOMAIN-SUFFIX,ascelibrary.org,DIRECT
+- DOMAIN-SUFFIX,asm.org,DIRECT
+- DOMAIN-SUFFIX,asme.org,DIRECT
+- DOMAIN-SUFFIX,astm.org,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-SUFFIX,awesome-hd.me,DIRECT
+- DOMAIN-SUFFIX,b612.net,DIRECT
+- DOMAIN-SUFFIX,baduziyuan.com,DIRECT
+- DOMAIN-SUFFIX,battle.net,DIRECT
+- DOMAIN-SUFFIX,bdatu.com,DIRECT
+- DOMAIN-SUFFIX,beitaichufang.com,DIRECT
+- DOMAIN-SUFFIX,biliapi.com,DIRECT
+- DOMAIN-SUFFIX,biliapi.net,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.tv,DIRECT
+- DOMAIN-SUFFIX,bjango.com,DIRECT
+- DOMAIN-SUFFIX,blizzard.com,DIRECT
+- DOMAIN-SUFFIX,bmj.com,DIRECT
+- DOMAIN-SUFFIX,booking.com,DIRECT
+- DOMAIN-SUFFIX,broadcasthe.net,DIRECT
+- DOMAIN-SUFFIX,bstatic.com,DIRECT
+- DOMAIN-SUFFIX,cailianpress.com,DIRECT
+- DOMAIN-SUFFIX,cambridge.org,DIRECT
+- DOMAIN-SUFFIX,camera360.com,DIRECT
+- DOMAIN-SUFFIX,cas.org,DIRECT
+- DOMAIN-SUFFIX,ccgslb.com,DIRECT
+- DOMAIN-SUFFIX,ccgslb.net,DIRECT
+- DOMAIN-SUFFIX,cctv.com,DIRECT
+- DOMAIN-SUFFIX,cctvpic.com,DIRECT
+- DOMAIN-SUFFIX,chdbits.co,DIRECT
+- DOMAIN-SUFFIX,chinanetcenter.com,DIRECT
+- DOMAIN-SUFFIX,chinaso.com,DIRECT
+- DOMAIN-SUFFIX,chua.pro,DIRECT
+- DOMAIN-SUFFIX,chuimg.com,DIRECT
+- DOMAIN-SUFFIX,chunyu.mobi,DIRECT
+- DOMAIN-SUFFIX,chushou.tv,DIRECT
+- DOMAIN-SUFFIX,clarivate.com,DIRECT
+- DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+- DOMAIN-SUFFIX,cmbchina.com,DIRECT
+- DOMAIN-SUFFIX,cmbimg.com,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-SUFFIX,com-hs-hkdy.com,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,czybjz.com,DIRECT
+- DOMAIN-SUFFIX,dandanzan.com,DIRECT
+- DOMAIN-SUFFIX,dfcfw.com,DIRECT
+- DOMAIN-SUFFIX,didialift.com,DIRECT
+- DOMAIN-SUFFIX,didiglobal.com,DIRECT
+- DOMAIN-SUFFIX,dingtalk.com,DIRECT
+- DOMAIN-SUFFIX,docschina.org,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,douyu.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,dxycdn.com,DIRECT
+- DOMAIN-SUFFIX,dytt8.net,DIRECT
+- DOMAIN-SUFFIX,eastmoney.com,DIRECT
+- DOMAIN-SUFFIX,ebscohost.com,DIRECT
+- DOMAIN-SUFFIX,emerald.com,DIRECT
+- DOMAIN-SUFFIX,empornium.me,DIRECT
+- DOMAIN-SUFFIX,engineeringvillage.com,DIRECT
+- DOMAIN-SUFFIX,eudic.net,DIRECT
+- DOMAIN-SUFFIX,feiliao.com,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fengkongcloud.com,DIRECT
+- DOMAIN-SUFFIX,fjhps.com,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,futu5.com,DIRECT
+- DOMAIN-SUFFIX,futunn.com,DIRECT
+- DOMAIN-SUFFIX,gandi.net,DIRECT
+- DOMAIN-SUFFIX,gazellegames.net,DIRECT
+- DOMAIN-SUFFIX,geilicdn.com,DIRECT
+- DOMAIN-SUFFIX,getpricetag.com,DIRECT
+- DOMAIN-SUFFIX,gifshow.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN-SUFFIX,hdbits.org,DIRECT
+- DOMAIN-SUFFIX,hdchina.org,DIRECT
+- DOMAIN-SUFFIX,hdhome.org,DIRECT
+- DOMAIN-SUFFIX,hdsky.me,DIRECT
+- DOMAIN-SUFFIX,hdslb.com,DIRECT
+- DOMAIN-SUFFIX,hicloud.com,DIRECT
+- DOMAIN-SUFFIX,hitv.com,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hostbuf.com,DIRECT
+- DOMAIN-SUFFIX,huxiucdn.com,DIRECT
+- DOMAIN-SUFFIX,huya.com,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,icevirtuallibrary.com,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,idqqimg.com,DIRECT
+- DOMAIN-SUFFIX,ieee.org,DIRECT
+- DOMAIN-SUFFIX,iesdouyin.com,DIRECT
+- DOMAIN-SUFFIX,igamecj.com,DIRECT
+- DOMAIN-SUFFIX,imf.org,DIRECT
+- DOMAIN-SUFFIX,infinitynewtab.com,DIRECT
+- DOMAIN-SUFFIX,iop.org,DIRECT
+- DOMAIN-SUFFIX,ip-cdn.com,DIRECT
+- DOMAIN-SUFFIX,ip.la,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,ipv6-test.com,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,iqiyipic.com,DIRECT
+- DOMAIN-SUFFIX,ithome.com,DIRECT
+- DOMAIN-SUFFIX,jamanetwork.com,DIRECT
+- DOMAIN-SUFFIX,java.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jd.hk,DIRECT
+- DOMAIN-SUFFIX,jdpay.com,DIRECT
+- DOMAIN-SUFFIX,jhu.edu,DIRECT
+- DOMAIN-SUFFIX,jidian.im,DIRECT
+- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+- DOMAIN-SUFFIX,jstor.org,DIRECT
+- DOMAIN-SUFFIX,jstucdn.com,DIRECT
+- DOMAIN-SUFFIX,kaiyanapp.com,DIRECT
+- DOMAIN-SUFFIX,karger.com,DIRECT
+- DOMAIN-SUFFIX,kaspersky-labs.com,DIRECT
+- DOMAIN-SUFFIX,keepcdn.com,DIRECT
+- DOMAIN-SUFFIX,keepfrds.com,DIRECT
+- DOMAIN-SUFFIX,kkmh.com,DIRECT
+- DOMAIN-SUFFIX,ksosoft.com,DIRECT
+- DOMAIN-SUFFIX,kuyunbo.club,DIRECT
+- DOMAIN-SUFFIX,libguides.com,DIRECT
+- DOMAIN-SUFFIX,livechina.com,DIRECT
+- DOMAIN-SUFFIX,lofter.com,DIRECT
+- DOMAIN-SUFFIX,loli.net,DIRECT
+- DOMAIN-SUFFIX,luojilab.com,DIRECT
+- DOMAIN-SUFFIX,m-team.cc,DIRECT
+- DOMAIN-SUFFIX,madsrevolution.net,DIRECT
+- DOMAIN-SUFFIX,maoyan.com,DIRECT
+- DOMAIN-SUFFIX,maoyun.tv,DIRECT
+- DOMAIN-SUFFIX,meipai.com,DIRECT
+- DOMAIN-SUFFIX,meitu.com,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,meitudata.com,DIRECT
+- DOMAIN-SUFFIX,meitustat.com,DIRECT
+- DOMAIN-SUFFIX,meixincdn.com,DIRECT
+- DOMAIN-SUFFIX,mgtv.com,DIRECT
+- DOMAIN-SUFFIX,mi-img.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mobike.com,DIRECT
+- DOMAIN-SUFFIX,moke.com,DIRECT
+- DOMAIN-SUFFIX,morethan.tv,DIRECT
+- DOMAIN-SUFFIX,mpg.de,DIRECT
+- DOMAIN-SUFFIX,msecnd.net,DIRECT
+- DOMAIN-SUFFIX,mubu.com,DIRECT
+- DOMAIN-SUFFIX,mxhichina.com,DIRECT
+- DOMAIN-SUFFIX,myanonamouse.net,DIRECT
+- DOMAIN-SUFFIX,myapp.com,DIRECT
+- DOMAIN-SUFFIX,myilibrary.com,DIRECT
+- DOMAIN-SUFFIX,myqcloud.com,DIRECT
+- DOMAIN-SUFFIX,myzaker.com,DIRECT
+- DOMAIN-SUFFIX,nanyangpt.com,DIRECT
+- DOMAIN-SUFFIX,nature.com,DIRECT
+- DOMAIN-SUFFIX,ncore.cc,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,netspeedtestmaster.com,DIRECT
+- DOMAIN-SUFFIX,nim-lang-cn.org,DIRECT
+- DOMAIN-SUFFIX,nvidia.com,DIRECT
+- DOMAIN-SUFFIX,oecd-ilibrary.org,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-SUFFIX,open.cd,DIRECT
+- DOMAIN-SUFFIX,oracle.com,DIRECT
+- DOMAIN-SUFFIX,osapublishing.org,DIRECT
+- DOMAIN-SUFFIX,oup.com,DIRECT
+- DOMAIN-SUFFIX,ourbits.club,DIRECT
+- DOMAIN-SUFFIX,ourdvs.com,DIRECT
+- DOMAIN-SUFFIX,outlook.com,DIRECT
+- DOMAIN-SUFFIX,ovid.com,DIRECT
+- DOMAIN-SUFFIX,oxfordartonline.com,DIRECT
+- DOMAIN-SUFFIX,oxfordbibliographies.com,DIRECT
+- DOMAIN-SUFFIX,oxfordmusiconline.com,DIRECT
+- DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
+- DOMAIN-SUFFIX,paypal.com,DIRECT
+- DOMAIN-SUFFIX,paypalobjects.com,DIRECT
+- DOMAIN-SUFFIX,pnas.org,DIRECT
+- DOMAIN-SUFFIX,privatehd.to,DIRECT
+- DOMAIN-SUFFIX,proquest.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,pterclub.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,dns.pub,DIRECT
+- DOMAIN-SUFFIX,doh.pub,DIRECT
+- DOMAIN-SUFFIX,qyer.com,DIRECT
+- DOMAIN-SUFFIX,qyerstatic.com,DIRECT
+- DOMAIN-SUFFIX,raychase.net,DIRECT
+- DOMAIN-SUFFIX,redacted.ch,DIRECT
+- DOMAIN-SUFFIX,ronghub.com,DIRECT
+- DOMAIN-SUFFIX,rsc.org,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,s-microsoft.com,DIRECT
+- DOMAIN-SUFFIX,s-reader.com,DIRECT
+- DOMAIN-SUFFIX,sagepub.com,DIRECT
+- DOMAIN-SUFFIX,sankuai.com,DIRECT
+- DOMAIN-SUFFIX,sciencedirect.com,DIRECT
+- DOMAIN-SUFFIX,sciencemag.org,DIRECT
+- DOMAIN-SUFFIX,scomper.me,DIRECT
+- DOMAIN-SUFFIX,scopus.com,DIRECT
+- DOMAIN-SUFFIX,seafile.com,DIRECT
+- DOMAIN-SUFFIX,servicewechat.com,DIRECT
+- DOMAIN-SUFFIX,siam.org,DIRECT
+- DOMAIN-SUFFIX,sina.com,DIRECT
+- DOMAIN-SUFFIX,sm.ms,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,snapdrop.net,DIRECT
+- DOMAIN-SUFFIX,snssdk.com,DIRECT
+- DOMAIN-SUFFIX,snwx.com,DIRECT
+- DOMAIN-SUFFIX,sogo.com,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu-inc.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,sohucs.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,spiedigitallibrary.org,DIRECT
+- DOMAIN-SUFFIX,springer.com,DIRECT
+- DOMAIN-SUFFIX,springerlink.com,DIRECT
+- DOMAIN-SUFFIX,springsunday.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,staticdn.net,DIRECT
+- DOMAIN-SUFFIX,steam-chat.com,DIRECT
+- DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
+- DOMAIN-SUFFIX,steamcontent.com,DIRECT
+- DOMAIN-SUFFIX,steamgames.com,DIRECT
+- DOMAIN-SUFFIX,steampowered.com,DIRECT
+- DOMAIN-SUFFIX,steamstat.us,DIRECT
+- DOMAIN-SUFFIX,steamstatic.com,DIRECT
+- DOMAIN-SUFFIX,steamusercontent.com,DIRECT
+- DOMAIN-SUFFIX,takungpao.com,DIRECT
+- DOMAIN-SUFFIX,tandfonline.com,DIRECT
+- DOMAIN-SUFFIX,teamviewer.com,DIRECT
+- DOMAIN-SUFFIX,tencent-cloud.net,DIRECT
+- DOMAIN-SUFFIX,tencent.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,test-ipv6.com,DIRECT
+- DOMAIN-SUFFIX,tianyancha.com,DIRECT
+- DOMAIN-SUFFIX,tjupt.org,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tmall.hk,DIRECT
+- DOMAIN-SUFFIX,totheglory.im,DIRECT
+- DOMAIN-SUFFIX,toutiao.com,DIRECT
+- DOMAIN-SUFFIX,udache.com,DIRECT
+- DOMAIN-SUFFIX,udacity.com,DIRECT
+- DOMAIN-SUFFIX,un.org,DIRECT
+- DOMAIN-SUFFIX,uni-bielefeld.de,DIRECT
+- DOMAIN-SUFFIX,uning.com,DIRECT
+- DOMAIN-SUFFIX,v-56.com,DIRECT
+- DOMAIN-SUFFIX,visualstudio.com,DIRECT
+- DOMAIN-SUFFIX,vmware.com,DIRECT
+- DOMAIN-SUFFIX,wangsu.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,webofknowledge.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,weibocdn.com,DIRECT
+- DOMAIN-SUFFIX,weico.cc,DIRECT
+- DOMAIN-SUFFIX,weidian.com,DIRECT
+- DOMAIN-SUFFIX,westlaw.com,DIRECT
+- DOMAIN-SUFFIX,whatismyip.com,DIRECT
+- DOMAIN-SUFFIX,wiley.com,DIRECT
+- DOMAIN-SUFFIX,windows.com,DIRECT
+- DOMAIN-SUFFIX,windowsupdate.com,DIRECT
+- DOMAIN-SUFFIX,worldbank.org,DIRECT
+- DOMAIN-SUFFIX,worldscientific.com,DIRECT
+- DOMAIN-SUFFIX,xiachufang.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomi.com,DIRECT
+- DOMAIN-SUFFIX,xiaohongshu.com,DIRECT
+- DOMAIN-SUFFIX,xhscdn.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xinhuanet.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,yangkeduo.com,DIRECT
+- DOMAIN-SUFFIX,ydstatic.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zhangzishi.cc,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zhuihd.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.io,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+- DOMAIN-SUFFIX,zmz2019.com,DIRECT
+- DOMAIN-SUFFIX,zmzapi.com,DIRECT
+- DOMAIN-SUFFIX,zmzapi.net,DIRECT
+- DOMAIN-SUFFIX,zmzfile.com,DIRECT
+- DOMAIN-SUFFIX,manmanbuy.com,DIRECT
+- DOMAIN,www-cdn.icloud.com.akadns.net,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,apple.co,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple.news,DIRECT
+- DOMAIN-SUFFIX,apple.com.cn,DIRECT
+- DOMAIN-SUFFIX,appstore.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,crashlytics.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com.cn,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,scdn.co,VPN
+- DOMAIN-SUFFIX,line.naver.jp,VPN
+- DOMAIN-SUFFIX,line.me,VPN
+- DOMAIN-SUFFIX,line-apps.com,VPN
+- DOMAIN-SUFFIX,line-cdn.net,VPN
+- DOMAIN-SUFFIX,line-scdn.net,VPN
+- DOMAIN-KEYWORD,blogspot,VPN
+- DOMAIN-KEYWORD,google,VPN
+- DOMAIN-SUFFIX,abc.xyz,VPN
+- DOMAIN-SUFFIX,admin.recaptcha.net,VPN
+- DOMAIN-SUFFIX,ampproject.org,VPN
+- DOMAIN-SUFFIX,android.com,VPN
+- DOMAIN-SUFFIX,androidify.com,VPN
+- DOMAIN-SUFFIX,appspot.com,VPN
+- DOMAIN-SUFFIX,autodraw.com,VPN
+- DOMAIN-SUFFIX,blogger.com,VPN
+- DOMAIN-SUFFIX,capitalg.com,VPN
+- DOMAIN-SUFFIX,certificate-transparency.org,VPN
+- DOMAIN-SUFFIX,chrome.com,VPN
+- DOMAIN-SUFFIX,chromeexperiments.com,VPN
+- DOMAIN-SUFFIX,chromestatus.com,VPN
+- DOMAIN-SUFFIX,chromium.org,VPN
+- DOMAIN-SUFFIX,creativelab5.com,VPN
+- DOMAIN-SUFFIX,debug.com,VPN
+- DOMAIN-SUFFIX,deepmind.com,VPN
+- DOMAIN-SUFFIX,dialogflow.com,VPN
+- DOMAIN-SUFFIX,firebaseio.com,VPN
+- DOMAIN-SUFFIX,getmdl.io,VPN
+- DOMAIN-SUFFIX,getoutline.org,VPN
+- DOMAIN-SUFFIX,ggpht.com,VPN
+- DOMAIN-SUFFIX,gmail.com,VPN
+- DOMAIN-SUFFIX,gmodules.com,VPN
+- DOMAIN-SUFFIX,godoc.org,VPN
+- DOMAIN-SUFFIX,golang.org,VPN
+- DOMAIN-SUFFIX,gstatic.com,VPN
+- DOMAIN-SUFFIX,gv.com,VPN
+- DOMAIN-SUFFIX,gvt0.com,VPN
+- DOMAIN-SUFFIX,gvt1.com,VPN
+- DOMAIN-SUFFIX,gvt3.com,VPN
+- DOMAIN-SUFFIX,gwtproject.org,VPN
+- DOMAIN-SUFFIX,itasoftware.com,VPN
+- DOMAIN-SUFFIX,madewithcode.com,VPN
+- DOMAIN-SUFFIX,material.io,VPN
+- DOMAIN-SUFFIX,polymer-project.org,VPN
+- DOMAIN-SUFFIX,recaptcha.net,VPN
+- DOMAIN-SUFFIX,shattered.io,VPN
+- DOMAIN-SUFFIX,synergyse.com,VPN
+- DOMAIN-SUFFIX,telephony.goog,VPN
+- DOMAIN-SUFFIX,tensorflow.org,VPN
+- DOMAIN-SUFFIX,tfhub.dev,VPN
+- DOMAIN-SUFFIX,tiltbrush.com,VPN
+- DOMAIN-SUFFIX,waveprotocol.org,VPN
+- DOMAIN-SUFFIX,waymo.com,VPN
+- DOMAIN-SUFFIX,webmproject.org,VPN
+- DOMAIN-SUFFIX,webrtc.org,VPN
+- DOMAIN-SUFFIX,whatbrowser.org,VPN
+- DOMAIN-SUFFIX,widevine.com,VPN
+- DOMAIN-SUFFIX,x.company,VPN
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,VPN
+- DOMAIN-SUFFIX,youtu.be,VPN
+- DOMAIN-SUFFIX,yt.be,VPN
+- DOMAIN-SUFFIX,ytimg.com,VPN
+- DOMAIN-SUFFIX,clubhouseapi.com,VPN
+- DOMAIN-SUFFIX,clubhouse.pubnub.com,VPN
+- DOMAIN-SUFFIX,joinclubhouse.com,VPN
+- DOMAIN-SUFFIX,ap3.agora.io,VPN
+- DOMAIN-KEYWORD,aka,VPN
+- DOMAIN-KEYWORD,facebook,VPN
+- DOMAIN-KEYWORD,youtube,VPN
+- DOMAIN-KEYWORD,twitter,VPN
+- DOMAIN-KEYWORD,instagram,VPN
+- DOMAIN-KEYWORD,gmail,VPN
+- DOMAIN-KEYWORD,pixiv,VPN
+- DOMAIN-SUFFIX,fb.com,VPN
+- DOMAIN-SUFFIX,meta.com,VPN
+- DOMAIN-SUFFIX,twimg.com,VPN
+- DOMAIN-SUFFIX,t.co,VPN
+- DOMAIN-SUFFIX,kenengba.com,VPN
+- DOMAIN-SUFFIX,akamai.net,VPN
+- DOMAIN-SUFFIX,whatsapp.net,VPN
+- DOMAIN-SUFFIX,whatsapp.com,VPN
+- DOMAIN-SUFFIX,snapchat.com,VPN
+- DOMAIN-SUFFIX,amazonaws.com,VPN
+- DOMAIN-SUFFIX,angularjs.org,VPN
+- DOMAIN-SUFFIX,akamaihd.net,VPN
+- DOMAIN-SUFFIX,amazon.com,VPN
+- DOMAIN-SUFFIX,bit.ly,VPN
+- DOMAIN-SUFFIX,bitbucket.org,VPN
+- DOMAIN-SUFFIX,blog.com,VPN
+- DOMAIN-SUFFIX,blogcdn.com,VPN
+- DOMAIN-SUFFIX,blogsmithmedia.com,VPN
+- DOMAIN-SUFFIX,box.net,VPN
+- DOMAIN-SUFFIX,bloomberg.com,VPN
+- DOMAIN-SUFFIX,cl.ly,VPN
+- DOMAIN-SUFFIX,cloudfront.net,VPN
+- DOMAIN-SUFFIX,cloudflare.com,VPN
+- DOMAIN-SUFFIX,cocoapods.org,VPN
+- DOMAIN-SUFFIX,dribbble.com,VPN
+- DOMAIN-SUFFIX,dropbox.com,VPN
+- DOMAIN-SUFFIX,dropboxstatic.com,VPN
+- DOMAIN-SUFFIX,dropboxusercontent.com,VPN
+- DOMAIN-SUFFIX,docker.com,VPN
+- DOMAIN-SUFFIX,duckduckgo.com,VPN
+- DOMAIN-SUFFIX,digicert.com,VPN
+- DOMAIN-SUFFIX,dnsimple.com,VPN
+- DOMAIN-SUFFIX,edgecastcdn.net,VPN
+- DOMAIN-SUFFIX,engadget.com,VPN
+- DOMAIN-SUFFIX,eurekavpt.com,VPN
+- DOMAIN-SUFFIX,fb.me,VPN
+- DOMAIN-SUFFIX,fbcdn.net,VPN
+- DOMAIN-SUFFIX,fc2.com,VPN
+- DOMAIN-SUFFIX,feedburner.com,VPN
+- DOMAIN-SUFFIX,fabric.io,VPN
+- DOMAIN-SUFFIX,flickr.com,VPN
+- DOMAIN-SUFFIX,fastly.net,VPN
+- DOMAIN-SUFFIX,github.com,VPN
+- DOMAIN-SUFFIX,github.io,VPN
+- DOMAIN-SUFFIX,githubusercontent.com,VPN
+- DOMAIN-SUFFIX,goo.gl,VPN
+- DOMAIN-SUFFIX,godaddy.com,VPN
+- DOMAIN-SUFFIX,gravatar.com,VPN
+- DOMAIN-SUFFIX,imageshack.us,VPN
+- DOMAIN-SUFFIX,imgur.com,VPN
+- DOMAIN-SUFFIX,jshint.com,VPN
+- DOMAIN-SUFFIX,ift.tt,VPN
+- DOMAIN-SUFFIX,j.mp,VPN
+- DOMAIN-SUFFIX,kat.cr,VPN
+- DOMAIN-SUFFIX,linode.com,VPN
+- DOMAIN-SUFFIX,lithium.com,VPN
+- DOMAIN-SUFFIX,megaupload.com,VPN
+- DOMAIN-SUFFIX,mobile01.com,VPN
+- DOMAIN-SUFFIX,modmyi.com,VPN
+- DOMAIN-SUFFIX,nytimes.com,VPN
+- DOMAIN-SUFFIX,name.com,VPN
+- DOMAIN-SUFFIX,openvpn.net,VPN
+- DOMAIN-SUFFIX,openwrt.org,VPN
+- DOMAIN-SUFFIX,ow.ly,VPN
+- DOMAIN-SUFFIX,pinboard.in,VPN
+- DOMAIN-SUFFIX,ssl-images-amazon.com,VPN
+- DOMAIN-SUFFIX,sstatic.net,VPN
+- DOMAIN-SUFFIX,stackoverflow.com,VPN
+- DOMAIN-SUFFIX,staticflickr.com,VPN
+- DOMAIN-SUFFIX,squarespace.com,VPN
+- DOMAIN-SUFFIX,symcd.com,VPN
+- DOMAIN-SUFFIX,symcb.com,VPN
+- DOMAIN-SUFFIX,symauth.com,VPN
+- DOMAIN-SUFFIX,ubnt.com,VPN
+- DOMAIN-SUFFIX,thepiratebay.org,VPN
+- DOMAIN-SUFFIX,tumblr.com,VPN
+- DOMAIN-SUFFIX,twitch.tv,VPN
+- DOMAIN-SUFFIX,twitter.com,VPN
+- DOMAIN-SUFFIX,wikipedia.com,VPN
+- DOMAIN-SUFFIX,wikipedia.org,VPN
+- DOMAIN-SUFFIX,wikimedia.org,VPN
+- DOMAIN-SUFFIX,wordpress.com,VPN
+- DOMAIN-SUFFIX,wsj.com,VPN
+- DOMAIN-SUFFIX,wsj.net,VPN
+- DOMAIN-SUFFIX,wp.com,VPN
+- DOMAIN-SUFFIX,vimeo.com,VPN
+- DOMAIN-SUFFIX,tapbots.com,VPN
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,medium.com,VPN
+- DOMAIN-SUFFIX,fast.com,VPN
+- DOMAIN-SUFFIX,nflxvideo.net,VPN
+- DOMAIN-SUFFIX,linkedin.com,VPN
+- DOMAIN-SUFFIX,licdn.com,VPN
+- DOMAIN-SUFFIX,bing.com,VPN
+- DOMAIN-SUFFIX,soundcloud.com,VPN
+- DOMAIN-SUFFIX,sndcdn.com,VPN
+- DOMAIN,api.statsig.com,VPN
+- DOMAIN,browser-intake-datadoghq.com,VPN
+- DOMAIN,chat.openai.com.cdn.cloudflare.net,VPN
+- DOMAIN,o33249.ingest.sentry.io,VPN
+- DOMAIN,openai-api.arkoselabs.com,VPN
+- DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,VPN
+- DOMAIN,openaicomproductionae4b.blob.core.windows.net,VPN
+- DOMAIN,production-openaicom-storage.azureedge.net,VPN
+- DOMAIN,static.cloudflareinsights.com,VPN
+- DOMAIN-KEYWORD,openaicom-api,VPN
+- DOMAIN-SUFFIX,algolia.net,VPN
+- DOMAIN-SUFFIX,auth0.com,VPN
+- DOMAIN-SUFFIX,cdn.cloudflare.net,VPN
+- DOMAIN-SUFFIX,challenges.cloudflare.com,VPN
+- DOMAIN-SUFFIX,chatgpt.livekit.cloud,VPN
+- DOMAIN-SUFFIX,client-api.arkoselabs.com,VPN
+- DOMAIN-SUFFIX,events.statsigapi.net,VPN
+- DOMAIN-SUFFIX,featuregates.org,VPN
+- DOMAIN-SUFFIX,host.livekit.cloud,VPN
+- DOMAIN-SUFFIX,identrust.com,VPN
+- DOMAIN-SUFFIX,intercom.io,VPN
+- DOMAIN-SUFFIX,intercomcdn.com,VPN
+- DOMAIN-SUFFIX,launchdarkly.com,VPN
+- DOMAIN-SUFFIX,oaistatic.com,VPN
+- DOMAIN-SUFFIX,oaiusercontent.com,VPN
+- DOMAIN-SUFFIX,observeit.net,VPN
+- DOMAIN-SUFFIX,openai.com,VPN
+- DOMAIN-SUFFIX,openaiapi-site.azureedge.net,VPN
+- DOMAIN-SUFFIX,openaicom.imgix.net,VPN
+- DOMAIN-SUFFIX,poe.com,VPN
+- DOMAIN-SUFFIX,segment.io,VPN
+- DOMAIN-SUFFIX,sentry.io,VPN
+- DOMAIN-SUFFIX,stripe.com,VPN
+- DOMAIN-SUFFIX,turn.livekit.cloud,VPN
+- IP-CIDR,24.199.123.28/32,VPN,no-resolve
+- IP-CIDR,45.76.214.191/32,VPN,no-resolve
+- IP-CIDR,64.23.132.171/32,VPN,no-resolve
+- IP-CIDR,143.198.200.27/32,VPN,no-resolve
+- IP-CIDR,159.89.204.203/32,VPN,no-resolve
+- DOMAIN-SUFFIX,t.me,VPN
+- DOMAIN-SUFFIX,tdesktop.com,VPN
+- DOMAIN-SUFFIX,telegra.ph,VPN
+- DOMAIN-SUFFIX,telegram.me,VPN
+- DOMAIN-SUFFIX,telegram.org,VPN
+- DOMAIN-SUFFIX,telesco.pe,VPN
+- IP-CIDR,91.108.4.0/22,VPN,no-resolve
+- IP-CIDR,91.108.8.0/22,VPN,no-resolve
+- IP-CIDR,91.108.12.0/22,VPN,no-resolve
+- IP-CIDR,91.108.16.0/22,VPN,no-resolve
+- IP-CIDR,91.108.56.0/22,VPN,no-resolve
+- IP-CIDR,109.239.140.0/24,VPN,no-resolve
+- IP-CIDR,149.154.160.0/20,VPN,no-resolve
+- IP-CIDR,2001:B28:F23D::/48,VPN,no-resolve
+- IP-CIDR,2001:B28:F23F::/48,VPN,no-resolve
+- IP-CIDR,2001:67C:4E8::/48,VPN,no-resolve
+- DOMAIN-SUFFIX,dnsleaktest.com,VPN
+- DOMAIN-SUFFIX,dnsleak.com,VPN
+- DOMAIN-SUFFIX,expressvpn.com,VPN
+- DOMAIN-SUFFIX,nordvpn.com,VPN
+- DOMAIN-SUFFIX,surfshark.com,VPN
+- DOMAIN-SUFFIX,ipleak.net,VPN
+- DOMAIN-SUFFIX,perfect-privacy.com,VPN
+- DOMAIN-SUFFIX,browserleaks.com,VPN
+- DOMAIN-SUFFIX,browserleaks.org,VPN
+- DOMAIN-SUFFIX,vpnunlimited.com,VPN
+- DOMAIN-SUFFIX,whoer.net,VPN
+- DOMAIN-SUFFIX,whrq.net,VPN
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,VPN
