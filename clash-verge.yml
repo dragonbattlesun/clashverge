@@ -104,12 +104,12 @@ proxies:
   network: tcp
   tls: true
   flow: xtls-rprx-vision
-  servername: www.sony.com
-  client-fingerprint: safari
+  servername: cdnjs.cloudflare.com
+  client-fingerprint: chrome
   reality-opts:
     public-key: WfpK-GsSUBWTQOH6aRdnXG76Y1QYSqYckaEHVD9FSEo
-    short-id: 18ada7421385ad1f
-    spider-x: /HL5IvCgxvoBkQCt
+    short-id: 2919b3
+    spider-x: /ryR6yzs9HT9Wnmn
 proxy-groups:
 - name: VPN
   type: select
